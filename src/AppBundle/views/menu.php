@@ -15,7 +15,11 @@
             <ul class="nav navbar-nav">
                 <li><a href="<?php echo $path('wiki') ?>">Wiki</a></li>
                 <li><a href="<?php echo $path('articles') ?>">Articles</a></li>
-                <li><a href="<?php echo $path('test') ?>">Test</a></li>
+                <li><a href="<?php echo $asset('app.php/produit'); ?>">Produit</a></li>
+                <li><a href="<?php echo $asset('app.php/formulaire'); ?>">Formulaire</a></li>
+                <li><a href="<?php echo $asset('app.php/test'); ?>">Test</a></li>
+                <li><a href="<?php echo $asset('app.php/contact'); ?>">Contact</a></li>
+                <li style="float:right;"><a href="<?php echo $asset('app.php/register'); ?>">Inscription</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">

@@ -29,6 +29,49 @@ class HomeController extends Controller
         return $this->render('Home/test.php');
     }
 
+    public function contactAction()
+    {
+        return $this->render('Home/contact.php');
+    }
+
+    public function traitFormAction()
+    {
+        return $this->render('Home/traitement_formulaire.php');
+    }
+
+    public function traitRegisterAction()
+    {
+        return $this->render('Home/traitement_register.php');
+    }
+
+    public function produitAction()
+    {
+        $pdo = $this->getPdo();
+        $articles = $pdo->query('Select * From article')->fetchAll();
+
+        return $this->render('Home/produit.php', [
+            'articles' => $articles,
+        ]);
+    }
+    public function formulaireAction()
+    {
+        $pdo = $this->getPdo();
+        $articles = $pdo->query('Select * From article')->fetchAll();
+
+        return $this->render('Home/formulaire.php', [
+            'articles' => $articles,
+        ]);
+    }
+
+    public function registerAction()
+    {
+        $pdo = $this->getPdo();
+        $articles = $pdo->query('Select * From article')->fetchAll();
+
+        return $this->render('Home/register.php', [
+            'articles' => $articles,
+        ]);
+    }
 
     public function articlesAction()
     {
